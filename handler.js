@@ -22,7 +22,7 @@ function generateError(code, err) {
 	return {
 		statusCode: code,
 		headers: {
-			'Access-Control-Allow-Origin': myDomain,
+			'Access-Control-Allow-Origin': 'johnmckenna.io',
 			'Access-Control-Allow-Headers': 'x-requested-with',
 			'Access-Control-Allow-Credentials': true
 		},
@@ -56,7 +56,7 @@ function generateEmailParams(body) {
 			},
 			Subject: {
 				Charset: 'UTF-8',
-				Data: `You received a message from ${myDomain}!`
+				Data: `You received a message from ${name}!`
 			}
 		}
 	}
